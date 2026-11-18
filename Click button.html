@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #1e293b;
+        }
+
+        .dashboard {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 220px;
+            box-shadow: 0 2px 10px #ddd;
+        }
+
+        .card h3 {
+            color: #64748b;
+        }
+
+        .card p {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Dashboard</h1>
+    <h2>Welcome, Student 👋</h2>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Student Name</h3>
+            <p>Abee</p>
+        </div>
+
+        <div class="card">
+            <h3>Attendance</h3>
+            <p id="attendance">85%</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Marks</h3>
+            <p id="marks">450</p>
+        </div>
+
+    </div>
+
+    <h2>Click Counter</h2>
+
+<h3>Count: <span id="count">0</span></h3>
+
+<button onclick="addCount()">Add Count +</button>
+
+    <script>
+       let count = 0;
+
+// Arrow Function
+const addCount = () => {
+    count++;
+    document.getElementById("count").innerText = count;
+};
+    </script>
+
+</body>
+</html>
